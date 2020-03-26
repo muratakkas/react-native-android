@@ -22,4 +22,4 @@ jobs:
  
     # Runs a set of commands using the runners shell
     - name: Do Something Based On Triggered Event Data
-      run: 'echo "${{ github.workspace }}.   ${{ github.runid }}"'
+      run: 'echo "${{ github.workspace }}.   ${{ github.run_id }}"'
