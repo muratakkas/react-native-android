@@ -19,7 +19,10 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
- 
+    # Runs a set of commands using the runners shell
+    - name: Props
+      run: 'echo "Triggered event branch: ${{ github.event.client_payload.branch }} partner: ${{ github.event.client_payload.partner }} environment: ${{ github.event.client_payload.environment }}"'
+
     # Runs a set of commands using the runners shell
     - name: Do Something Based On Triggered Event Data
       run: 'echo "${{ github.workspace }}.   ${{ github.run_id }}"'
